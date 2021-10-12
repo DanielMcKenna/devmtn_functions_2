@@ -112,20 +112,15 @@ contains(names, "Colt", (result) => {
 
 const uniq = (arr, cb) => {
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 1; j < arr[i].length; j++) {
+    for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] === arr[j]) {
+        console.log(`${arr[i]}: ${arr[j]}`);
         arr.splice(arr[i], 1);
       }
     }
   }
   return cb(arr);
 };
-
-uniq(names, (uniqArr) => {
-  console.log(
-    `The new names array with all the duplicate items removed is ${uniqArr}`
-  );
-});
 
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
@@ -134,8 +129,14 @@ uniq(names, (uniqArr) => {
   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
 */
 
-// CODE HERE
+//var names = ["Tyler", "Cahlan", "Ryan", "Colt", "Tyler", "Blaine", "Cahlan"];
 
+// CODE HERE
+uniq(names, (uniqArr) => {
+  console.log(
+    `The new names array with all the duplicate items removed is ${uniqArr}`
+  );
+});
 ////////// PROBLEM 6 //////////
 
 /* 
