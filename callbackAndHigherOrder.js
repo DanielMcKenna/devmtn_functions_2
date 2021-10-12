@@ -10,17 +10,13 @@ const multiply = (num1, num2, cb) => {
   cb(num1 * num2);
 };
 
-function callBack(num1) {
-  return num1 + 2;
-}
-
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// multiply(4, 3, answer => {
-//   console.log('The answer is ' + answer) //should console.log 12
-// })
+multiply(4, 3, (answer) => {
+  console.log("The answer is " + answer); //should console.log 12
+});
 
 ////////// PROBLEMS 2 - 6 //////////
 
