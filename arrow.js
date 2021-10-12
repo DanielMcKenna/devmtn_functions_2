@@ -87,3 +87,5 @@ const compareNums = (num1, num2) => {
 */
 
 //CODE HERE
+
+const bestMovie = (title) => `${title} is the best movie ever!`;
