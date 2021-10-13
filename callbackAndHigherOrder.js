@@ -146,6 +146,12 @@ uniq(names, (uniqArr) => {
 
 // CODE HERE
 
+const each = (names, cb) => {
+  names.forEach(function (element, index) {
+    cb(element, index);
+  });
+};
+
 /*
   Invoke the each function, passing in the names array and a callback function.
   The callback function should take in two paremeters, item and index.
@@ -154,6 +160,10 @@ uniq(names, (uniqArr) => {
 */
 
 // CODE HERE
+
+each(names, (item, index) => {
+  console.log(`The item at index ${index} is ${item}`);
+});
 
 ////////// PROBLEM 7 //////////
 
@@ -187,13 +197,28 @@ var users = [
 
 // CODE HERE
 
+const getUserById = (users, id, cb) => {
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].id === id) {
+      cb(users[i]);
+    }
+  }
+};
+
 // UNCOMMENT THE FUNCTION CALL BELOW
 // RUN THIS FILE WITH NODE
 // CHECK YOUR ANSWER
 
-// getUserById(users, '16t', user => {
-//   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address)
-// })
+getUserById(users, "16t", (user) => {
+  console.log(
+    "The user with the id 16t has the email of " +
+      user.email +
+      " the name of " +
+      user.name +
+      " and the address of " +
+      user.address
+  );
+});
 
 ////////// CHALLENGE //////////
 
