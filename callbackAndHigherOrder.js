@@ -284,3 +284,5 @@ console.log(addTen(10));
 */
 
 // CODE HERE
+
+const addThree = addingFactory(12);
